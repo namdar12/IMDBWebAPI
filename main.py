@@ -3,7 +3,6 @@ import re
 from flask.views import MethodView
 from wtforms import Form,SubmitField
 from flask import Flask,render_template, request
-import
 import random
 import json
 import http.client

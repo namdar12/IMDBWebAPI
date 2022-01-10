@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selected Movie</title>
+</head>
+<body>
+<p style="color: darkblue;text-align:center;font-size: 45px;">HERE IS THE SELECTED MOVIE PAGE</p>
+<p style="color: darkgreen;text-align:center;font-size: 30px;">{{movie['title'].to_string(index=False)}}</p>
+<img style="display: block;padding:12px;margin-left: auto;margin-right: auto;width:500px;height:600px;"
+     src={{movie['image'].to_string(index=False)}}>
+<div style="text-align:center;font-size: 30px;padding:20px;top-padding:15px;" >
+    <a href={{url_for('most_popular')}} style="font-weight:bold">Go to the all the movie's page</a>
+</div>
+<br>
+<div style="text-align:center;font-size:30px;padding:20px;top-padding:15px;">
+    <a href={{url_for('random_page')}} style="text-align:center">Go to a random movie</a>
+</div>
+
+</body>
+</html>

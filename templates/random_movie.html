@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMDB</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+<h2>Here Is A Random Movie From IMDB</h2>
+<H2>{{title}}</H2>
+<H2>Movie Year: {{year}}</H2>
+<img src={{image}} style="width:500px;height:600px;" >
+<form action="/random" method="post">
+    <br>
+    {{movie.button}}
+    <br>
+<br>
+    <br>
+<div style="text-align: center" >
+    <a href={{url_for('most_popular')}} style="font-weight:bold">Go to the all the movie's page</a>
+</div>
+    <br>
+<div style="text-align: center"  >
+        <a href="selected_movie/{{title}}" style="font-weight:bold"> {{title}}</a>
+</div>
+</form>
+
+
+</body>
+</html>

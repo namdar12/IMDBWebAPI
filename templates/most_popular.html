@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Most Popular Movies</title>
+    <link rel="stylesheet" href="static/main.css">
+
+</head>
+<body>
+    <ol>
+    <!-- For loop logic of jinja template -->
+    {%for i in range(1,number_of_movies)%}
+        <ul>
+            <div style="text-align: center" >
+             <a href="selected_movie/{{movie['title'].iloc[i]}}"> {{movie['title'].iloc[i]}}</a>
+            </div>
+            <img src={{movie['image'].iloc[i]}} style="width:500px;height:600px;">
+            <p>Movie Year: {{movie['year'].iloc[i]}}</p>
+            <p>Movie Rating: {{movie['imDbRating'].iloc[i]}}</p>
+            <p>Movie Rank: {{movie['rank'].iloc[i]}}</p>
+        </ul>
+    {%endfor%}
+    </ol>
+
+
+
+</body>
+</html>
